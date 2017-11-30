@@ -4,31 +4,42 @@
 <title>Why are you even looking at this</title>
 </head>
 <body>
-
-<h1 align="center">Billy Zhaoheng Li</h1>
-<p align="center">Computer Science and Statistics Undergraduate at University of Illinois Urbana-Champaign</p>
-<p style="text-align:center"><img src="avatar3.jpg" width="212" height="184"/></p>
-<h2 align="left">About me</h2>
-<p><pre class="tab">   You must be very bored to be able to stumble upon this website.<br>   As the title says, I'm a CS&Stats student at UIUC, and I'm not going into further details<br> because <a href="new_resume.pdf">my resume</a> explains it all.<br>   I'm interested in game design; I make stuff like this:</pre></p>
-<p><pre class="tab">       |<br>       |<br>       |<br>       |<br>       |<br>   \   |   /<br>    \  |  /<br>     \ | /<br>      \|/<br>       V</pre></p>
-<script src="TemplateData/UnityProgress.js"></script>  
-<script src="Build/UnityLoader.js"></script>
-<script>
-var gameInstance = UnityLoader.instantiate("gameContainer", "Build/runningmanweb.json", {onProgress: UnityProgress});
-</script>
-<div class="webgl-content">
-<div id="gameContainer" style="width: 640px; height: 400px"></div>
-</div>
-</div>
-<h2 align="left">FAQ</h2>
-<h4 align="left">Q: Who made the models in the game?</h4>
-<a href="#demo" data-toggle="collapse">Collapsible</a>
-<div id="demo" class="collapse">
-A: They are Unity prefabs. I'm no art student so please don't blame me for not being able to make 3D models of cute anime girls (even though I would like be able to).
-</div>
-<h4 align="left">Q: Why host this page on Github?</h4>
-<p><pre class="tab">A: I'm as underfunded as my university. Feel free to support me here:</pre></p>
-<h4 align="left">Q: OMG THIS GUY SO PRO I WANT HIM FOR JOB/INTERNSHIP/ETC.:</h4>
-<p><pre class="tab">A: Send your requests to: --> <a href="mailto:zl20@illinois.edu">zl20@illinois.edu</a> <-- </pre></p>
+<section class="container">
+  <div id="card">
+    <figure class="front">1</figure>
+    <figure class="back">2</figure>
+  </div>
+</section>
+.container { 
+  width: 200px;
+  height: 260px;
+  position: relative;
+  perspective: 800px;
+}
+#card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+#card figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+#card .front {
+  background: red;
+}
+#card .back {
+  background: blue;
+  transform: rotateY( 180deg );
+}
+#card.flipped {
+  transform: rotateY( 180deg );
+}
 </body>
 </html>
