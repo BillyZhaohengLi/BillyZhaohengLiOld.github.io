@@ -12,7 +12,7 @@
 #cube {
     width: 400px;
     transform-style: preserve-3d;
-    animation: rotate 2s linear;
+    animation: rotate 2s linear infinite;
 }
 #cube div{
   position: absolute;
@@ -50,7 +50,7 @@
 }
 @keyframes rotate{
   0% {transform:rotateY(0deg)};
-  100% {transform:rotateY(90deg)};
+  100% {transform:rotateY(360deg)};
 }
 </style>
 </head>
