@@ -3,81 +3,389 @@
 <head>
 <title>Why are you even looking at this</title>
 <style>
+#title{
+	margin:0px;
+}
 #container {
-  width: 400px;
-  height: 400px;
-  margin: 200px auto;
-  perspective: 800px;
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+  perspective: 1000px;
 }
 #cube {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
   transform-style: preserve-3d;
-  animation: rotate 10s linear infinite;
+}
+#cube.rotatelefthome {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotatelefthome 2s ease-in-out forwards;
+}
+#cube.rotateleftskills {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotateleftskills 2s ease-in-out forwards;
+}
+#cube.rotateleftabout {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotateleftabout 2s ease-in-out forwards;
+}
+#cube.rotateleftproject {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotateleftproject 2s ease-in-out forwards;
+}
+#cube.rotateuphome {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotateuphome 2s ease-in-out forwards;
+}
+#cube.rotateupcontact {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotateupcontact 2s ease-in-out forwards;
+}
+#cube.rotaterighthome {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotaterighthome 2s ease-in-out forwards;
+}
+#cube.rotaterightskills {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotaterightskills 2s ease-in-out forwards;
+}
+#cube.rotaterightproject {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotaterightproject 2s ease-in-out forwards;
+}
+#cube.rotaterightabout {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotaterightabout 2s ease-in-out forwards;
+}
+#cube.rotatedownhome {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotatedownhome 2s ease-in-out forwards;
+}
+#cube.rotatedowngame {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: rotatedowngame 2s ease-in-out forwards;
+}
+#cube.swag {
+  position:absolute;
+  transform-origin: 250px 250px 0px;
+  transform-style: preserve-3d;
+  animation: swag 2s ease-in-out forwards;
 }
 #cube div{
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 500px; 
+  height: 500px;
 }
 #front{
-  transform: translateZ(200px);
-  background: rgba(255,255,255,0.85);
+  transform: translateZ(250px);
+  background: rgba(220,220,220,0.7);
   text-align: center;
 }
+#frontcase{
+  background: rgba(220,220,220,0.85);
+}
 #back{
-  transform: rotateY(180deg) translateZ(200px);
-  background:red;
+  transform: rotateY(180deg) translateZ(250px);
+  background: rgba(220,70,70,0.7);
+}
+#backcase{
+  background: rgba(220,70,70,0.85);
 }
 #left{
-  transform: rotateY(-90deg) translateX(-200px);
+  transform: rotateY(-90deg) translateX(-250px);
   transform-origin: left;
-  background:green;
+  background: rgba(50,220,50,0.7);
+}
+#leftcase{
+  background: rgba(50,220,50,0.85);
 }
 #right{
-  transform: rotateY(90deg) translateX(200px);
+  transform: rotateY(90deg) translateX(250px);
   transform-origin:right;
-  background:blue;
+  background: rgba(65,65,220,0.7);
+}
+#rightcase{
+  background: rgba(65,65,220,0.85);
 }
 #top{
-  transform: rotateX(-90deg) translateY(-200px);
+  transform: rotateX(-90deg) rotateZ(180deg) rotateY(180deg) translateY(-250px);
   transform-origin:top;
-  background:#101010;
+  background: rgba(128,128,128,0.85);
 }
 #bottom{
-  transform: rotateX(90deg) translateY(200px);
+  transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateY(250px);
   transform-origin:bottom;
-  background:#101010
+  background: rgba(100,100,100,0.7);
 }
-@keyframes rotate{
-  0% { transform : rotateY(0deg)};
-  100% { transform : rotateY(360deg)};
+#bottomcase{
+  background: rgba(100,100,100,0.85);
+}
+@keyframes rotatelefthome{
+  0%   { transform:rotateY(0deg); }
+  100% { transform:rotateY(90deg);}
+}
+@keyframes rotateleftskills{
+  0%   { transform:rotateY(270deg); }
+  100% { transform:rotateY(360deg);}
+}
+@keyframes rotateleftabout{
+  0%   { transform:rotateY(90deg); }
+  100% { transform:rotateY(180deg);}
+}
+@keyframes rotateleftproject{
+  0%   { transform:rotateY(180deg); }
+  100% { transform:rotateY(270deg);}
+}
+@keyframes rotateuphome{
+  0%   { transform:rotateX(0deg); }
+  100% { transform:rotateX(-90deg);}
+}
+@keyframes rotateupcontact{
+  0%   { transform:rotateX(90deg); }
+  100% { transform:rotateX(0deg);}
+}
+@keyframes rotaterighthome{
+  0%   { transform:rotateY(0deg); }
+  100% { transform:rotateY(-90deg);}
+}
+@keyframes rotaterightskills{
+  0%   { transform:rotateY(270deg); }
+  100% { transform:rotateY(180deg);}
+}
+@keyframes rotaterightabout{
+  0%   { transform:rotateY(90deg); }
+  100% { transform:rotateY(0deg);}
+}
+@keyframes rotaterightproject{
+  0%   { transform:rotateY(180deg); }
+  100% { transform:rotateY(90deg);}
+}
+@keyframes swag{
+  0%   { transform:rotateZ(180deg) rotateX(180deg);}
+  50%  { transform:rotateY(0deg) rotateX(180deg); }
+  100% { transform:rotateY(0deg) rotateX(270deg);}
+}
+@keyframes rotatedownhome{
+  0%   { transform:rotateX(0deg); }
+  100% { transform:rotateX(90deg);}
+}
+@keyframes rotatedowngame{
+  0%   { transform:rotateX(270deg); }
+  100% { transform:rotateX(360deg);}
 }
 </style>
 </head>
 
 <body>
-  <div id="container">
-    <div id="cube">
-      <div id = "front">
-	  <br><br><font size="+2">Billy Zhaoheng Li</font>
-	  <br>Computer Science and Statistics Undergraduate at University of Illinois Urbana-Champaign
-	  <p style="text-align:center"><img src="avatar3.jpg" width="212" height="184"/></p>
-	  You must be very bored to be able to stumble upon this website. Here's a bad animation of a cube to cheer you up.	  
-	</div>
-    <div id = "back">
-	  <script src="TemplateData/UnityProgress.js"></script>  
-	  <script src="Build/UnityLoader.js"></script>
-	  <script>
-	  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/runningmanweb.json", {onProgress: UnityProgress});
-	  </script>
-	  <div class="webgl-content">
-	  <div id="gameContainer" style="width: 400px; height: 250px"></div>
-	  </div>
-	</div>
-      <div id = "left"></div>
-      <div id = "right"></div>
-      <div id = "top"></div>
-      <div id = "bottom"></div>
+	<div id="container">
+		<div id="cube">
+			<!--Front page-->
+			<div id = "front">
+				<!--content-->
+				<div id = "frontcase"  style="position:absolute; top:50px; left:80px; height:400px; width:340px;">
+					<h1 id = "title" align="center" margin="-10">Billy Zhaoheng Li</h1>
+					<p align="center">Computer Science and Statistics Undergraduate at University of Illinois Urbana-Champaign</p>
+					<p style="text-align:center"><a download="handsome.jpg" href="avatar3.jpg" title="ImageName">
+					<img src="avatar3.jpg" width="212" height="184" onmouseover="this.src='avatar2.png';"
+					onmouseout="this.src='avatar3.jpg';"/></a></p>
+					<p align="center">You must be very bored to be able to stumble upon this website. Here's a bad animation of a cube to cheer you up.	</p>
+				</div>
+				<!--navigation-->
+				<img src = "aboutme.png" style="position:absolute; top:200px; left:0px" onmouseover="this.src='aboutme2.png';"
+				onmouseout="this.src='aboutme.png';" onclick = "rotatelefthome()"/>
+				<img src = "skillsccw.png" style="position:absolute; top:200px; left:430px" onmouseover="this.src='skillsccw2.png';"
+				onmouseout="this.src='skillsccw.png';" onclick = "rotaterighthome()"/>
+				<img src = "playagame.png" style="position:absolute; top:0px; left:200px" onmouseover="this.src='playagame2.png';"
+				onmouseout="this.src='playagame.png';" onclick = "rotateuphome()"/>
+				<img src = "contactinfo.png" style="position:absolute; top:450px; left:200px" onmouseover="this.src='contactinfo2.png';"
+				onmouseout="this.src='contactinfo.png';" onclick = "rotatedownhome()"/>
+				<script>
+					var div = document.getElementById("cube");
+					function rotatelefthome(){
+						div.className = "rotatelefthome";
+					}
+					function rotateuphome(){
+						div.className = "rotateuphome";
+					}
+					function rotaterighthome(){
+						div.className = "rotaterighthome";
+					}
+					function rotatedownhome(){
+						div.className = "rotatedownhome";
+					}
+				</script>
+			</div>
+			<!--Projects page-->
+			<div id = "back">
+				<!--content-->
+				<div id = "backcase"  style="position:absolute; top:50px; left:80px; height:400px; width:340px;">
+				<div id = "backcase2"  style="position:absolute; top:5px; left:5px; height:390px; width:330px;">
+					<h1 id = "title" align="center" margin="-10">Projects</h1>
+					<h2>Collaborative projects:</h2>
+						<p>Python function time complexity calculator (Avaliable December 12)<br>
+						Mobile app - Looking For (Avaliable December 12)<br>
+						<a href="http://alevel-sociology.wikia.com/wiki/Alevel_Sociology_Wikia">Alevel Sociology Wikia</a><br>
+						<a href="The_Aluba_subculture.pdf">Sociological research: 'Aluba' game in Chinese high schools</a><br>
+						</p>
+					<h2>Solo projects:</h2>
+						<p><a href="CS_mods_and_maps.rar">Tutorial for programming Counter-Strike 1.6 mods with Pawn and creating 3D maps with Valve Hammer Editor (Chinese):</a><br>
+						<a href="javascript:swag()">Unity game: Running man</a></p>
+				</div>
+				</div>
+				<img src = "aboutmeccw.png" style="position:absolute; top:200px; left:430px" onmouseover="this.src='aboutmeccw2.png';"
+				onmouseout="this.src='aboutmeccw.png';" onclick = "rotaterightproject()"/>
+				<img src = "skills.png" style="position:absolute; top:200px; left:0px" onmouseover="this.src='skills2.png';"
+				onmouseout="this.src='skills.png';" onclick = "rotateleftproject()"/>
+				<script>
+				var div = document.getElementById("cube");
+				function rotateleftproject(){
+					div.className = "rotateleftproject";
+				}
+				function swag(){
+					div.className = "swag";
+				}
+				function rotaterightproject(){
+					div.className = "rotaterightproject";
+				}
+				</script>
+			</div>
+			<!--About me-->
+			<div id = "left">
+				<!--content-->
+				<div id = "leftcase"  style="position:absolute; top:50px; left:80px; height:400px; width:340px;">
+				<div id = "leftcase2"  style="position:absolute; top:5px; left:5px; height:390px; width:330px;">
+					<h1 id = "title" align="center" margin="-10">About me</h1>
+					<p>&emsp;As the front page says, I'm an Computer Science and Statistics undergraduate at the University of 
+					Illinois at Urbana-Champaign.<br>&emsp;I'm rather interested in game design; this interest led me to the major I'm in right now
+					but I'm also considering big data as my career due to how relevant the major is to this field. <font size="-5">It's actually
+					because I got rejected by EECS LOL</font><br>
+					   &emsp;I'm also taking a minor in Sociology, and I'm particularly fascinated with anti-school subcultures; I've done a few pieces of Sociological research
+					   on the area with an example avaliable on the 'Projects' page. I mainly use quantitative methods.<br>
+					   &emsp;For more information on me <a href="new_resume.pdf">my resume</a> is avaliable for download. </p>
+				</div>
+				</div>
+				<!--navigation-->
+				<img src = "backtomainpageright.png" style="position:absolute; top:200px; left:430px" onmouseover="this.src='backtomainpageright2.png';"
+				onmouseout="this.src='backtomainpageright.png';" onclick = "rotaterightabout()"/>
+				<img src = "project.png" style="position:absolute; top:200px; left:0px" onmouseover="this.src='project2.png';"
+				onmouseout="this.src='project.png';" onclick = "rotateleftabout()"/>
+				<script>
+				var div = document.getElementById("cube");
+				function rotateleftabout(){
+					div.className = "rotateleftabout";
+				}
+				function rotaterightabout(){
+					div.className = "rotaterightabout";
+				}
+				</script>
+			</div>
+			<!--Skills page-->
+			<div id = "right">
+				<!--content-->
+				<div id = "rightcase"  style="position:absolute; top:50px; left:80px; height:400px; width:340px;">
+				<div id = "rightcase2"  style="position:absolute; top:5px; left:5px; height:390px; width:330px;">
+					<h1 id = "title" align="center" margin="-10">Skills:</h1>
+				</div>
+				</div>
+				<img src = "skillsend.png" style="position:absolute; top:0px; left:0px; width:500px; height:500px;" />
+				<!--navigation-->
+				<img src = "backtomainpageleft.png" style="position:absolute; top:200px; left:0px" onmouseover="this.src='backtomainpageleft2.png';"
+				onmouseout="this.src='backtomainpageleft.png';" onclick = "rotateleftskills()"/>
+				<img src = "projectsccw.png" style="position:absolute; top:200px; left:430px" onmouseover="this.src='projectsccw2.png';"
+				onmouseout="this.src='projectsccw.png';" onclick = "rotaterightskills()"/>
+				<script>
+				var div = document.getElementById("cube");
+				function rotateleftskills(){
+					div.className = "rotateleftskills";
+				}
+				function rotaterightskills(){
+					div.className = "rotaterightskills";
+				}
+				</script>
+			</div>
+			<!--minigame page-->
+			<div id = "top">
+				<!--content-->
+				<div id = "topcase"  style="position:absolute; top:0px; left:10px; height:400px; width:480px;">
+					<p style="margin:5px -20px 0px -30px" align="center">Here's a game that did not make it onto the app store to entertain you:</p>
+				</div>
+				<!--Unity game-->
+				<script src="TemplateData/UnityProgress.js"></script>  
+				<script src="Build/UnityLoader.js"></script>
+				<script>
+					var gameInstance = UnityLoader.instantiate("gameContainer", "Build/runningmanweb.json", {onProgress: UnityProgress});
+				</script>
+				<div class="webgl-content" style="position:absolute; top:30px; left:0px;">
+					<div id="gameContainer" style="width: 500px; height: 313px"></div>
+				</div>
+				<!--more content-->
+				<div id = "topcase"  style="position:absolute; top:340px; left:10px; height:400px; width:480px;">
+					<p style="margin:7px 0px -10px 0px"><font size = "-1">&emsp;Yes, since this is a webpage you can upload your highscores; compete against other players and beat the record set by me!<br>
+					&emsp;And no I did not make the models or music; I'm no Music or Art major so I used Unity prefabs.</font></p>				
+				</div>
+				<!--navigation-->
+				<img src = "backtomainpage.png" style="position:absolute; top:450px; left:200px" onmouseover="this.src='backtomainpage2.png';"
+				onmouseout="this.src='backtomainpage.png';" onclick = "rotatedowngame()"/>
+				<script>
+					var div = document.getElementById("cube");
+					function rotatedowngame(){
+						div.className = "rotatedowngame";
+					}
+				</script>
+			</div>
+			<!--contact info page-->
+			<div id = "bottom">
+			<!--content-->
+				<div id = "bottomcase"  style="position:absolute; top:50px; left:80px; height:400px; width:340px;">
+				<div id = "bottomcase2"  style="position:absolute; top:2px; left:2px; height:396px; width:336px;">
+					<h1 id = "title" align="center" margin="-10">Contact me:</h1>
+					<p>Personal website: Go look at the address bar of your browser.</p>
+					<p>Email: <a href="mailto:zl20@illinois.edu">zl20@illinois.edu</a></p>
+					<p>Github: <a href="https://github.com/BillyZhaohengLi">https://github.com/BillyZhaohengLi</a></p>
+					<p>LinkedIn: <a href="https://www.linkedin.com/in/zhaoheng-li/">https://www.linkedin.com/in/zhaoheng-li/</a></p>
+					<p>Facebook: <a href="https://www.facebook.com/zhaoheng.li.399">https://www.facebook.com/zhaoheng.li.399</a></p>
+					<p style="margin:-15px 0px 0px 0px"><font size = "-4">Yeah I'm too lazy to put anything on that page</font></p>
+					<p>For those cool people who want to play some DotA2/CSGO with me:</p>
+					<p>Steam: <a href="http://steamcommunity.com/id/yoooo12345/">http://steamcommunity.com/id/yoooo12345/</a></p>
+					<p align = "center" style="margin:10px 0px -15px 0px"><font size = "-4">Did you know? You can download a copy of my handsome picture by clicking it.</font></p>
+				</div>
+				</div>
+				<!--navigation-->
+				<img src = "backtomainpagebot.png" style="position:absolute; top:0px; left:200px" onmouseover="this.src='backtomainpagebot2.png';"
+				onmouseout="this.src='backtomainpagebot.png';" onclick = "rotateupcontact()"/>
+				<script>
+					var div = document.getElementById("cube");
+					function rotateupcontact(){
+						div.className = "rotateupcontact";
+					}
+				</script>
+			</div>		
+		</div>
     </div>
-  </div>
+</div> 
 </body>
 </html>
