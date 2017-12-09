@@ -233,6 +233,7 @@
 					}
 					function rotaterighthome(){
 						div.className = "rotaterighthome";
+						document.getElementById("skillschart").src = "skillschart.gif";
 					}
 					function rotatedownhome(){
 						div.className = "rotatedownhome";
@@ -264,6 +265,7 @@
 				var div = document.getElementById("cube");
 				function rotateleftproject(){
 					div.className = "rotateleftproject";
+					document.getElementById("skillschart").src = "skillschart.gif";
 				}
 				function swag(){
 					div.className = "swag";
@@ -311,7 +313,7 @@
 					<h1 id = "title" align="center" margin="-10">Skills:</h1>
 				</div>
 				</div>
-				<img src = "skillsend.png" style="position:absolute; top:0px; left:0px; width:500px; height:500px;" />
+				<img id = "skillschart" src = "skillschartidle.png" style="position:absolute; top:50px; left:80px; width:340px; height:400px;" />
 				<!--navigation-->
 				<img src = "backtomainpageleft.png" style="position:absolute; top:200px; left:0px" onmouseover="this.src='backtomainpageleft2.png';"
 				onmouseout="this.src='backtomainpageleft.png';" onclick = "rotateleftskills()"/>
