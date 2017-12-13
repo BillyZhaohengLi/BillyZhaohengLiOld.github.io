@@ -134,7 +134,13 @@
 #top{
   transform: rotateX(-90deg) rotateZ(180deg) rotateY(180deg) translateY(-250px);
   transform-origin:top;
-  background: rgba(128,128,128,0.85);
+  background: rgba(100,100,100,0.7);
+}
+#topcase{
+  background: rgba(100,100,100,0.85);
+}
+#topcase3{
+  background: rgba(100,100,100,0.7);
 }
 #bottom{
   transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateY(250px);
@@ -332,22 +338,21 @@
 			<!--minigame page-->
 			<div id = "top">
 				<!--content-->
-				<div id = "topcase"  style="position:absolute; top:0px; left:10px; height:400px; width:480px;">
-					<p style="margin:5px -20px 0px -30px" align="center">Here's a game that did not make it onto the app store to entertain you:</p>
+				<div id = "topcase"  style="position:absolute; top:50px; left:80px; height:400px; width:340px;">
+				<div id = "topcase2"  style="position:absolute; top:2px; left:2px; height:396px; width:336px;">
+					<p align="center" style = "margin:2px 0px 0px 0px;">Here's a game that did not make it onto the app store to entertain you:</p>
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					<p style = "margin:5px 0px 0px 0px; line-height = 5px;"><font size = "-1">&emsp;Yes, since this is a webpage you can upload your highscores; compete against other players and beat the record set by me!<br>
+					&emsp;And no I did not make the models or music; I'm no Music or Art major so I used Unity prefabs.</font></p>
+				</div>
 				</div>
 				<!--Unity game-->
-				<script src="TemplateData/UnityProgress.js"></script>  
 				<script src="Build/UnityLoader.js"></script>
 				<script>
-					var gameInstance = UnityLoader.instantiate("gameContainer", "Build/runningmanweb.json", {onProgress: UnityProgress});
+					var gameInstance = UnityLoader.instantiate("gameContainer", "Build/runningmanweb.json");
 				</script>
-				<div class="webgl-content" style="position:absolute; top:30px; left:0px;">
-					<div id="gameContainer" style="width: 500px; height: 313px"></div>
-				</div>
-				<!--more content-->
-				<div id = "topcase"  style="position:absolute; top:340px; left:10px; height:400px; width:480px;">
-					<p style="margin:7px 0px -10px 0px"><font size = "-1">&emsp;Yes, since this is a webpage you can upload your highscores; compete against other players and beat the record set by me!<br>
-					&emsp;And no I did not make the models or music; I'm no Music or Art major so I used Unity prefabs.</font></p>				
+				<div class="webgl-content" style="position:absolute; top:100px; left:10px; width: 480px; height: 270px">
+					<div id="gameContainer" style="width: 480px; height: 270px"></div>
 				</div>
 				<!--navigation-->
 				<img src = "backtomainpage.png" style="position:absolute; top:450px; left:200px" onmouseover="this.src='backtomainpage2.png';"
