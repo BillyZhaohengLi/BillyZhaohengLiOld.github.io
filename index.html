@@ -258,7 +258,7 @@
 						<a href="http://alevel-sociology.wikia.com/wiki/Alevel_Sociology_Wikia">Alevel Sociology Wikia</a><br>
 						<a href="The_Aluba_subculture.pdf">Sociological research: 'Aluba' game in Chinese high schools</a><br>
 						</p>
-					<h2>Independent projects:</h2>
+					<h2>Solo projects:</h2>
 						<p><a href="CS_mods_and_maps.rar">Tutorial for programming Counter-Strike 1.6 mods with Pawn and creating 3D maps with Valve Hammer Editor (Chinese):</a><br>
 						<a href="javascript:swag()">Unity game: Running man</a></p>
 				</div>
@@ -353,11 +353,9 @@
 				<!--Unity game-->
 				<script src="Build/UnityLoader.js"></script>
 				<script>
-					var gameInstance = UnityLoader.instantiate("gameContainer", "Build/runningmanweb.json");
+					var gameInstance = UnityLoader.instantiate("gameContainer", "Build/runningmanadjust.json");
 				</script>
-				<div class="webgl-content" style="position:absolute; top:100px; left:80px; width: 340px; height: 270px">
-					<div id="gameContainer" style="width: 340px; height: 270px"></div>
-				</div>
+				<div id="gameContainer" style="position:absolute; top:100px; left:80px; width: 340px; height: 270px; margin: auto"></div>
 				<!--navigation-->
 				<img src = "backtomainpage.png" style="position:absolute; top:450px; left:200px" onmouseover="this.src='backtomainpage2.png';"
 				onmouseout="this.src='backtomainpage.png';" onclick = "rotatedowngame()"/>
